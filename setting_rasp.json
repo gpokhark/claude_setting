@@ -1,0 +1,25 @@
+{
+  "model": "opusplan",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq . > post-log.json"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash /home/claw/.claude/statusline.sh"
+  },
+  "alwaysThinkingEnabled": false,
+  "effortLevel": "medium",
+  "enabledPlugins": {
+    "context7@claude-plugins-official": true
+  }
+}
